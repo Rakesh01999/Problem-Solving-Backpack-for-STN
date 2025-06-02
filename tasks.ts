@@ -45,7 +45,6 @@ console.log("Book Titles:", getBookTitles(books));
 
 // 3. Function Composition
 
-
 // Individual functions
 const square = (n: number): number => n * n;
 const double = (n: number): number => n * 2;
@@ -55,11 +54,12 @@ const addFive = (n: number): number => n + 5;
 const composedFunction = (n: number): number => addFive(double(square(n)));
 
 // (3^2) * 2 + 5 = 23
-console.log("Composed Result:", composedFunction(3)); 
+console.log("Composed Result:", composedFunction(3));
+
+
 
 
 //  4. Sorting Objects
-
 
 type Car = {
     make: string;
@@ -69,8 +69,8 @@ type Car = {
 
 const cars: Car[] = [
     { make: "Toyota", model: "Camry", year: 2018 },
+    { make: "Tesla", model: "Model 3", year: 2021 },
     { make: "Honda", model: "Civic", year: 2015 },
-    { make: "Tesla", model: "Model 3", year: 2021 }
 ];
 
 function sortCarsByYear(carList: Car[]): Car[] {
@@ -80,8 +80,9 @@ function sortCarsByYear(carList: Car[]): Car[] {
 console.log("Sorted Cars:", sortCarsByYear(cars));
 
 
-//  ✅ **5. Find and Modify**
 
+
+//  5. Find and Modify
 
 function updatePersonAge(persons: Person[], name: string, newAge: number): Person[] {
     return persons.map(person =>
@@ -89,12 +90,13 @@ function updatePersonAge(persons: Person[], name: string, newAge: number): Perso
     );
 }
 
-const updatedPeople = updatePersonAge(people, "Alice", 35);
+const updatedPeople = updatePersonAge(people, "Kamal", 35);
 console.log("Updated People:", updatedPeople);
 
 
-// ✅ **6. Array Reduction**
 
+
+// 6. Array Reduction
 
 const numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -105,7 +107,8 @@ function sumOfEvenNumbers(nums: number[]): number {
 console.log("Sum of Even Numbers:", sumOfEvenNumbers(numbers));
 
 
-//  ✅ **7. Leap Year Checker**
+
+//  7. Leap Year Checker
 
 function isLeapYear(year: number): boolean {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
@@ -116,7 +119,8 @@ console.log("Is 1900 a Leap Year?", isLeapYear(1900)); // false
 
 
 
-// ✅ **8. Unique Values**
+
+ // 8. Unique Values
 
 
 const numsWithDuplicates: number[] = [1, 2, 2, 3, 4, 4, 5];
@@ -129,8 +133,8 @@ console.log("Unique Values:", getUniqueValues(numsWithDuplicates));
 
 
 
-// ✅ **9. Advanced Sorting**
 
+// 9. Advanced Sorting
 
 type Student = {
     name: string;
@@ -153,7 +157,10 @@ function sortByAverageGrade(students: Student[]): Student[] {
 
 console.log("Sorted Students by Grade:", sortByAverageGrade(students));
 
-// ✅ **10. Functional Programming - Reduce
+
+
+
+// 10. Functional Programming - Reduce
 
 type Item = {
     quantity: number;
