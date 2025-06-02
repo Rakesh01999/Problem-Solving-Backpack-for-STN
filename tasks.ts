@@ -54,10 +54,11 @@ const addFive = (n: number): number => n + 5;
 // Composed function
 const composedFunction = (n: number): number => addFive(double(square(n)));
 
-console.log("Composed Result:", composedFunction(3)); // (3^2) * 2 + 5 = 23
+// (3^2) * 2 + 5 = 23
+console.log("Composed Result:", composedFunction(3)); 
 
 
-//  ✅ **4. Sorting Objects**
+//  4. Sorting Objects
 
 
 type Car = {
